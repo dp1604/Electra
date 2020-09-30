@@ -1,6 +1,6 @@
 package com.hdsoft.electra;
 
-import android.content.ContentValues;
+
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -31,15 +31,4 @@ public class DBHandler extends SQLiteOpenHelper {
         onCreate(sqLiteDatabase);
     }
 
-    public boolean insertData(String comment){
-        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(COL_2,comment);
-        long result = sqLiteDatabase.insert(TABLE_NAME,null, contentValues);
-        if (result == -1)
-            return false;
-        else
-            return true;
-
-    }
 }
