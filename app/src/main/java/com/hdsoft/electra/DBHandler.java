@@ -9,25 +9,34 @@ import androidx.annotation.Nullable;
 
 public class DBHandler extends SQLiteOpenHelper {
 
-    public static final String DATABASE_NAME = "Electra.db";
-    public static final String TABLE_NAME = "comments_table";
-    public static final String COL_1 = "ID";
-    public static final String COL_2 = "COMMENT";
+    public static final int VERSION = 1;
+    public static final String DB_NAME = "Electra";
+    public static final String TABLE_NAME = "Comments";
+
+    //column names
+    public static final String ID = "id";
+    public static final String COMMENT = "comments";
 
 
     public DBHandler(@Nullable Context context) {
-        super(context, DATABASE_NAME, null, 1);
-
+        super(context, DB_NAME, null, VERSION);
     }
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL(" create table " + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,COMMENT TEXT) ") ;
+      String TABLE_CREATE_QUERY = "CREATE TABLE "+TABLE_NAME+" " + "("
+              +ID+ "INTEGER PRIMARY KEY AUTOINCREMENT," +COMMENT+ "TEXT" + ");";
+
+        sqLiteDatabase.execSQL(TABLE_CREATE_QUERY);
+
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME);
+        String DROP_TABLE_QUERY = "DROP TABLE IF EXISTS " + TABLE_NAME;
+        // Drop order table if exists
+        sqLiteDatabase.execSQL(DROP_TABLE_QUERY);
+        // Create table again
         onCreate(sqLiteDatabase);
     }
 
