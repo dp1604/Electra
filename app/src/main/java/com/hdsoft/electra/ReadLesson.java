@@ -1,0 +1,14 @@
+package com.hdsoft.electra;
+
+import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class ReadLesson extends AppCompatActivity{
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.read_lesson);
+    }
+}

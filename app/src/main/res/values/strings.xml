@@ -11,4 +11,10 @@
     <string name="add_things_want">Things you should want..?</string>
     <string name="lesson_description">Lets Begin</string>
     <string name="btn_add_lesson">Add lesson</string>
+    <string name="head_page3">Read AND Know</string>
+    <string name="question1">Do you want to add something to this..?</string>
+    <string name="question2">Do not you want this..? </string>
+    <string name="btn_update">Update</string>
+    <string name="btn_delete">Delete</string>
+    <string name="head_page4">Update with what you Know..!</string>
 </resources>
