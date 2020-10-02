@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Electra</string>
+    <string name="head_page1">Want to know more in Simply..?</string>
+    <string name="lesson1_name">Lesson 1</string>
+    <string name="lesson2_name">Lesson 2</string>
+    <string name="btn1_view">View</string>
+    <string name="btn2_view">View</string>
+    <string name="btn_add">Add a Lesson</string>
+    <string name="head_page2">Add what you know for Others..!</string>
+    <string name="add_topic_name">Lesson Topic</string>
+    <string name="add_things_want">Things you should want..?</string>
+    <string name="lesson_description">Lets Begin</string>
+    <string name="btn_add_lesson">Add lesson</string>
 </resources>
