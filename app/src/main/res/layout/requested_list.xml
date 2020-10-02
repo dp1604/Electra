@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+
+    <!--  ListRow Left side Thumbnail image -->
+    <LinearLayout android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/"
+        android:layout_marginRight="5dip">
+
+        <ImageView
+            android:id="@+id/list_image"
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:src="@drawable/">
+
+        </ImageView>
+
+    </LinearLayout>
+
+    <!-- Title-->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="Title"
+        android:textColor="#040404"
+        android:typeface="sans"
+        android:textSize="15dip"
+        android:textStyle="bold"/>
+
+    <!-- request -->
+    <TextView
+        android:id="@+id/reqTime"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:textColor="#343434"
+        android:textSize="10dip"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="requested" />
+
+    <!-- Time (not a text)-->
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@id/reqTime"
+        android:gravity="right"
+        android:text="5:45pm"
+        android:layout_marginLeft="130dip"
+        android:textSize="10dip"
+        android:textColor="#10bcc9"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/btnEdit"
+        android:layout_width="55dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/time"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="250dip"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="EDIT"
+        android:textSize="8dp"
+        android:textColor="#10bcc9"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/btnDel"
+        android:layout_width="55dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/time"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="320dip"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="DELETE"
+        android:textSize="8dp"
+        android:textColor="#c91a3a"
+        android:textStyle="bold"/>
+
+
+</RelativeLayout>
