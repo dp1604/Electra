@@ -15,68 +15,82 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase DB) {
-        DB.execSQL("create Table Userdetails (comment TEXT primary key)");
+        DB.execSQL("create Table Userdetails(comment TEXT primary key, contact TEXT)");
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase DB, int i, int i1) {
         DB.execSQL("drop Table if exists Userdetails");
+
     }
 
-    public Boolean insertuserdata(String comment) {
+    public Boolean insertuserdata(String comment, String contact)
+    {
         SQLiteDatabase DB = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("comment",comment);
-        long result = DB.insert("Userdetails", null,contentValues);
+        contentValues.put("contact",contact);
+        long result=DB.insert("Userdetails",null, contentValues);
         if (result == -1) {
             return false;
-        } else {
+        }else {
             return true;
         }
     }
-    public Boolean updateuserdata(String comment) {
+
+    public Boolean updateuserdata(String comment, String contact)
+    {
         SQLiteDatabase DB = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        Cursor cursor = DB.rawQuery("Select * from Userdetails where comment = ?",new String[] {comment});
+
+        contentValues.put("contact",contact);
+        Cursor cursor = DB.rawQuery("Select * from Userdetails where comment = ?", new String[] {comment});
         if (cursor.getCount()>0)
         {
-            long result = DB.update("Userdetails", contentValues, "comment=?", new String[]{comment});
+
+            long result=DB.update("Userdetails", contentValues, "comment=?", new String[] {comment});
             if (result == -1) {
                 return false;
-            } else {
+            }else {
                 return true;
             }
         }else
-            {
-                return false;
-        }
-    }
+        {
+            return false;
+        }}
 
-    public Boolean deletedata(String comment) {
+
+    public Boolean deletedata(String comment)
+    {
         SQLiteDatabase DB = this.getWritableDatabase();
 
-        Cursor cursor = DB.rawQuery("Select * from Userdetails where comment = ?",new String[] {comment});
+
+        Cursor cursor = DB.rawQuery("Select * from Userdetails where comment = ?", new String[] {comment});
         if (cursor.getCount()>0)
         {
-            long result = DB.delete("Userdetails",  "comment=?", new String[]{comment});
+
+            long result=DB.delete("Userdetails", "comment=?", new String[] {comment});
             if (result == -1) {
                 return false;
-            } else {
+            }else {
                 return true;
             }
         }else
         {
             return false;
         }
+
+
     }
 
-    public Cursor getdata() {
+    public Cursor getdata()
+    {
         SQLiteDatabase DB = this.getWritableDatabase();
 
-        Cursor cursor = DB.rawQuery("Select * from Userdetails",null);
+        Cursor cursor = DB.rawQuery("Select * from Userdetails", null);
+
         return cursor;
     }
-
 
 }
