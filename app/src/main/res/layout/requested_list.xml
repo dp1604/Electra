@@ -13,14 +13,14 @@
         android:layout_height="wrap_content"
         android:padding="5dip"
         android:layout_alignParentLeft="true"
-        android:background="@drawable/"
+        android:background="@drawable/ic_launcher_background"
         android:layout_marginRight="5dip">
 
         <ImageView
             android:id="@+id/list_image"
             android:layout_width="60dip"
             android:layout_height="60dip"
-            android:src="@drawable/">
+            android:src="@drawable/ic_launcher_background">
 
         </ImageView>
 
@@ -41,7 +41,7 @@
 
     <!-- request -->
     <TextView
-        android:id="@+id/reqTime"
+        android:id="@+id/req"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/title"
@@ -51,45 +51,35 @@
         android:layout_toRightOf="@+id/thumbnail"
         android:text="requested" />
 
-    <!-- Time (not a text)-->
-    <TextView
-        android:id="@+id/time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignTop="@id/reqTime"
-        android:gravity="right"
-        android:text="5:45pm"
-        android:layout_marginLeft="130dip"
-        android:textSize="10dip"
-        android:textColor="#10bcc9"
-        android:textStyle="bold"/>
 
+
+    <!-- Edit -->
     <Button
         android:id="@+id/btnEdit"
-        android:layout_width="55dp"
+        android:layout_width="61dp"
         android:layout_height="30dp"
-        android:layout_below="@id/time"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="250dip"
-        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_below="@id/req"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="101dp"
+        android:layout_marginRight="101dp"
         android:text="EDIT"
-        android:textSize="8dp"
         android:textColor="#10bcc9"
-        android:textStyle="bold"/>
+        android:textSize="8dp"
+        android:textStyle="bold" />
 
+    <!-- Delete -->
     <Button
         android:id="@+id/btnDel"
         android:layout_width="55dp"
         android:layout_height="30dp"
-        android:layout_below="@id/time"
+        android:layout_below="@id/req"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="320dip"
-        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_marginLeft="340dip"
         android:text="DELETE"
-        android:textSize="8dp"
         android:textColor="#c91a3a"
-        android:textStyle="bold"/>
+        android:textSize="8dp"
+        android:textStyle="bold" />
 
 
 </RelativeLayout>
