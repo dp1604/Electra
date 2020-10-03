@@ -54,6 +54,9 @@
 
 
     <!-- Edit -->
+
+    <!-- Delete -->
+
     <Button
         android:id="@+id/btnEdit"
         android:layout_width="61dp"
@@ -61,21 +64,24 @@
         android:layout_below="@id/req"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginEnd="101dp"
-        android:layout_marginRight="101dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="168dp"
+        android:layout_marginRight="168dp"
         android:text="EDIT"
         android:textColor="#10bcc9"
         android:textSize="8dp"
         android:textStyle="bold" />
 
-    <!-- Delete -->
     <Button
         android:id="@+id/btnDel"
         android:layout_width="55dp"
         android:layout_height="30dp"
         android:layout_below="@id/req"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="340dip"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="91dp"
+        android:layout_marginRight="91dp"
         android:text="DELETE"
         android:textColor="#c91a3a"
         android:textSize="8dp"
