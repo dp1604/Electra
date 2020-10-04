@@ -29,7 +29,7 @@ public class requested_list extends AppCompatActivity {
 
                 AlertDialog.Builder builder= new AlertDialog.Builder(requested_list.this);
 
-                builder.setMessage("Are you sure ?")
+                builder.setMessage("Do you want to Delete ?")
                         .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -50,7 +50,7 @@ public class requested_list extends AppCompatActivity {
 
                 AlertDialog.Builder builder= new AlertDialog.Builder(requested_list.this);
 
-                builder.setMessage("Are you sure ?")
+                builder.setMessage("Do you want to edit ?")
                         .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {

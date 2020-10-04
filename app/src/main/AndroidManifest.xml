@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".requested_list"></activity>
+
     </application>
 
 </manifest>
