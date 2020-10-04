@@ -21,7 +21,7 @@ public class ReadLesson extends AppCompatActivity{
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ReadLesson.this,UpdateLesson.class);
+                Intent intent = new Intent(ReadLesson.this,ReadLesson.class);
                 startActivity(intent);
             }
         });
