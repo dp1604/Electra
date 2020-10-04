@@ -17,9 +17,7 @@
         android:textAlignment="center"
         android:textColor="#1B0101"
         android:textSize="30sp"
-        android:textStyle="bold"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal" />
+        android:textStyle="bold" />
 
 
     <EditText

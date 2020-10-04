@@ -2,6 +2,7 @@ package com.hdsoft.electra;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;

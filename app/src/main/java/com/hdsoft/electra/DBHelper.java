@@ -66,6 +66,7 @@ public class DBHelper extends SQLiteOpenHelper {
         SQLiteDatabase DB = this.getWritableDatabase();
 
 
+
         Cursor cursor = DB.rawQuery("Select * from Userdetails where comment = ?", new String[] {comment});
         if (cursor.getCount()>0)
         {
@@ -80,6 +81,7 @@ public class DBHelper extends SQLiteOpenHelper {
         {
             return false;
         }
+
 
 
     }
