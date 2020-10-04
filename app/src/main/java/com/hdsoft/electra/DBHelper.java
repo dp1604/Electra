@@ -6,7 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import androidx.annotation.Nullable;
 
 public class DBHelper extends SQLiteOpenHelper {
     public DBHelper(Context context) {
@@ -25,6 +24,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     }
 
+    //Insert Function
     public Boolean insertuserdata(String comment, String contact)
     {
         SQLiteDatabase DB = this.getWritableDatabase();
@@ -39,6 +39,7 @@ public class DBHelper extends SQLiteOpenHelper {
         }
     }
 
+    //Update Function
     public Boolean updateuserdata(String comment, String contact)
     {
         SQLiteDatabase DB = this.getWritableDatabase();
@@ -60,7 +61,7 @@ public class DBHelper extends SQLiteOpenHelper {
             return false;
         }}
 
-
+    //Delete Function
     public Boolean deletedata(String comment)
     {
         SQLiteDatabase DB = this.getWritableDatabase();
@@ -85,7 +86,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
     }
-
+    //View Function
     public Cursor getdata()
     {
         SQLiteDatabase DB = this.getWritableDatabase();

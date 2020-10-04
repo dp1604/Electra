@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         view = findViewById(R.id.btnView);
         DB = new DBHelper(this);
 
+        //Insert Function
         insert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,10 +42,28 @@ public class MainActivity extends AppCompatActivity {
                 else
                     Toast.makeText(MainActivity.this, "Comment Not Added", Toast.LENGTH_SHORT).show();
 
+                //User Input Validations
+                if( comment.length()==0)
+                {
+                    comment.requestFocus();
+                    comment.setError("FIELD CANNOT BE EMPTY");
+                }
+
+                else if(contact.length()==0)
+                {
+                    contact.requestFocus();
+                    contact.setError("FIELD CANNOT BE EMPTY");
+                }
+                else
+                {
+                    Toast.makeText(MainActivity.this,"Validation Successful",Toast.LENGTH_LONG).show();
+                }
+
+
 
             }
         });
-
+        //Update Function
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Delete Function
         delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -75,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
+        //View Function
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
