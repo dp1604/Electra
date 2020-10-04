@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CircuitList"></activity>
+        <activity android:name=".TheCalculator"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
+        <activity android:name=".CircuitList" />
         <activity android:name=".Circuits" />
         <activity android:name=".Home">
             <intent-filter>
