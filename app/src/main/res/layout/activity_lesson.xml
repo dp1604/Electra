@@ -85,4 +85,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.926" />
 
+    <Button
+        android:id="@+id/more"
+        android:layout_width="135dp"
+        android:layout_height="45dp"
+        android:background="#F30909"
+        android:text="More"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.764"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.934" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

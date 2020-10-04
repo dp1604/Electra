@@ -11,13 +11,23 @@ import android.widget.Toast;
 
 public class LessonActivity extends AppCompatActivity {
     EditText topic,things,begin;
-    Button insert;
+    Button insert,button;
     DBHelper DB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lesson);
+
+        button = (Button) findViewById(R.id.more);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LessonActivity.this,ReadLesson.class);
+                startActivity(intent);
+            }
+        });
 
         topic = findViewById(R.id.topic);
         things = findViewById(R.id.things);
