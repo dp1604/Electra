@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">Electra</string>
-    <string name="things_you_may_know">Things You May Know</string>
-    <string name="add">ADD</string>
-    <string name="exit">EXIT</string>
-    <string name="leave_a_comment">Leave a comment...</string>
+
+    <string name="ic_view">ic_view</string>
 </resources>
