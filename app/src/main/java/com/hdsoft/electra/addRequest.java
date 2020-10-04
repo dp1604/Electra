@@ -13,12 +13,15 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.List;
+
 public class addRequest extends AppCompatActivity {
 
     private Button btnReq;
     private EditText editTextTitle ,cate, val1,val2;
     private ReqDbHandler reqDbHandler;
     private Context context;
+    private List<ReqModle> reqModles;
 
 
     @Override

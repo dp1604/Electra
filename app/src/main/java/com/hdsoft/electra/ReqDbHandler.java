@@ -2,10 +2,14 @@ package com.hdsoft.electra;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ReqDbHandler extends SQLiteOpenHelper {
 
@@ -61,5 +65,33 @@ public class ReqDbHandler extends SQLiteOpenHelper {
 
         sqLiteDatabase.insert(TABLE_NAME,null,contentValues); //save table
         sqLiteDatabase.close(); // close table
+    }
+
+    // get all ReqModle
+
+    public List<ReqModle> getAllReqModles(){
+
+        List<ReqModle> reqModles = new ArrayList();
+        SQLiteDatabase db = getReadableDatabase();
+        String query = "SELECT * FROM"+TABLE_NAME;
+
+        Cursor cursor = db.rawQuery(query,null);
+
+        if(cursor.moveToFirst()){
+            do{
+                ReqModle reqModle = new ReqModle();
+
+                reqModle.setId(cursor.getInt(0));
+                reqModle.setTitle(cursor.getString(0));
+                reqModle.setCategory(cursor.getString(0));
+                reqModle.setValue1(cursor.getString(0));
+                reqModle.setValue2(cursor.getString(0));
+
+                reqModles.add(reqModle);
+            }while (cursor.moveToNext());
+
+        }
+        return reqModles;
+
     }
 }
