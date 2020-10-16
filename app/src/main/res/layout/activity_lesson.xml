@@ -1,102 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     android:background="@drawable/backgorund"
     tools:context=".LessonActivity" >
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:id="@+id/texttitle"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
         android:text="@string/head_page1"
-        android:textColor="#F8F5F5"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.094" />
+        android:textAlignment="center"
+        android:textColor="#FBFBFB"
+        android:textSize="30dp"
+        android:gravity="center_horizontal" />
 
     <EditText
         android:id="@+id/topic"
-        android:layout_width="388dp"
-        android:layout_height="56dp"
-        android:ems="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:hint="@string/add_topic_name"
-        android:inputType="text"
-        android:textColor="#F8F6F6"
-        android:textColorHint="#CCC8C8"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.209" />
+        android:ems="10"
+        android:textSize="24dp"
+        android:textColorHint="#87CEEB"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/texttitle"
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/things"
-        android:layout_width="388dp"
-        android:layout_height="125dp"
-        android:ems="10"
-        android:gravity="start|top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:hint="@string/add_things_want"
-        android:inputType="text"
-        android:textColor="#F8F6F6"
-        android:textColorHint="#CCC8C8"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.391"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.364" />
+        android:ems="10"
+        android:textSize="24dp"
+        android:textColorHint="#87CEEB"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/topic"
+        android:inputType="textMultiLine" />
 
     <EditText
-        android:id="@+id/begin"
-        android:layout_width="387dp"
-        android:layout_height="233dp"
-        android:ems="10"
-        android:gravity="start|top"
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:hint="@string/lesson_description"
-        android:inputType="text"
-        android:textColor="#F8F6F6"
-        android:textColorHint="#CCC8C8"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.375"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.746" />
+        android:ems="10"
+        android:textSize="24dp"
+        android:textColorHint="#87CEEB"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/things"
+        android:inputType="textMultiLine" />
 
     <Button
-        android:id="@+id/insert"
-        android:layout_width="135dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="32dp"
-        android:background="#F30909"
+        android:id="@+id/btnInsert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
         android:text="@string/btn_add"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.163"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.926" />
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/description"
+        android:background="#FF0000"/>
 
     <Button
-        android:id="@+id/more"
-        android:layout_width="135dp"
-        android:layout_height="45dp"
-        android:background="#F30909"
-        android:text="More"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.764"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.934" />
+        android:id="@+id/btnView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:text="@string/btn_view"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/btnInsert"
+        android:background="#00FF00"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/textDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/question"
+        android:textSize="20dp"
+        android:textColor="#FFFF00"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/btnView"/>
+
+    <Button
+        android:id="@+id/btnYes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_yes"
+        android:textSize="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/textDescription"
+        android:background="#0000FF" />
+
+
+</RelativeLayout>

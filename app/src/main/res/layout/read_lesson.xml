@@ -1,111 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     android:background="@drawable/backgorund">
 
-
-
     <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
+        android:id="@+id/texttitle2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
         android:text="@string/head_page2"
-        android:textColor="#FAF7F7"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.531"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.043" />
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textColor="#FBFBFB"
+        android:gravity="center_horizontal" />
 
     <EditText
-        android:id="@+id/topic"
-        android:layout_width="401dp"
-        android:layout_height="58dp"
+        android:id="@+id/topic2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:textColor="#FBF9F9"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.583"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.141" />
+        android:hint="@string/add_topic_name"
+        android:textSize="24dp"
+        android:textColorHint="#87CEEb"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/texttitle2"
+        android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/things"
-        android:layout_width="398dp"
-        android:layout_height="88dp"
+        android:id="@+id/things2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        android:textColor="#FDFCFC"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.303" />
+        android:hint="@string/add_things_want"
+        android:textSize="24dp"
+        android:textColorHint="#87CEEB"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/topic2"
+        android:inputType="textMultiLine" />
 
     <EditText
-        android:id="@+id/begin"
-        android:layout_width="396dp"
-        android:layout_height="181dp"
+        android:id="@+id/description2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        android:textColor="#F8F5F5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.586" />
+        android:hint="@string/lesson_description"
+        android:textSize="24dp"
+        android:textColorHint="#87CEEB"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/things2"
+        android:inputType="textMultiLine" />
 
     <Button
-        android:id="@+id/update"
-        android:layout_width="120dp"
-        android:layout_height="45dp"
-        android:background="#F81616"
+        android:id="@+id/btnUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="@string/btn_update"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.054"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.854" />
+        android:textSize="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/description2"
+        android:background="#00FF00"/>
 
     <Button
-        android:id="@+id/delete"
-        android:layout_width="120dp"
-        android:layout_height="45dp"
-        android:background="#FB2727"
+        android:id="@+id/btnDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="@string/btn_delete"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.054"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.946" />
+        android:textSize="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/btnUpdate"
+        android:background="#FF0000"/>
+</RelativeLayout>
 
-    <Button
-        android:id="@+id/view"
-        android:layout_width="120dp"
-        android:layout_height="45dp"
-        android:background="#FB2727"
-        android:text="View"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.762" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+

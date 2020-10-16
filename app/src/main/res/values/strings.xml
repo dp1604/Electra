@@ -1,14 +1,14 @@
 <resources>
     <string name="app_name">Electra</string>
     <string name="head_page1">Lessons</string>
-    <string name="btn1_view">View</string>
+    <string name="btn_view">View Lesson</string>
     <string name="btn_add">Add Lesson</string>
     <string name="add_topic_name">Lesson Topic</string>
     <string name="add_things_want">Things you should want..?</string>
     <string name="lesson_description">Lets Begin</string>
     <string name="head_page2">Read AND Know</string>
-    <string name="question1">Do you want to add something to this..?</string>
-    <string name="question2">Do not you want this..? </string>
-    <string name="btn_update">Update</string>
-    <string name="btn_delete">Delete</string>
+    <string name="question">Do you want to update or delete..?</string>
+    <string name="btn_update">Update Lesson</string>
+    <string name="btn_delete">Delete Lesson</string>
+    <string name="btn_yes">Yes,I want</string>
 </resources>

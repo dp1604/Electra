@@ -19,7 +19,7 @@ public class LessonActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lesson);
 
-        button = (Button) findViewById(R.id.more);
+        button = (Button) findViewById(R.id.btnYes);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,30 +29,8 @@ public class LessonActivity extends AppCompatActivity {
             }
         });
 
-        topic = findViewById(R.id.topic);
-        things = findViewById(R.id.things);
-        begin = findViewById(R.id.begin);
-
-        insert = findViewById(R.id.insert);
-        DB = new DBHelper(this);
-
-        insert.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String topicTXT = topic.getText().toString();
-                String thingsTXT = things.getText().toString();
-                String beginTXT = begin.getText().toString();
-
-                Boolean checkinsertdata = DB.insertlesson(topicTXT,thingsTXT,beginTXT);
-                if(checkinsertdata==true)
-                    Toast.makeText(LessonActivity.this, "Lesson Inserted", Toast.LENGTH_SHORT).show();
-                else
-                    Toast.makeText(LessonActivity.this, "Lesson not Inserted", Toast.LENGTH_SHORT).show();
 
 
-
-            }
-        });
 
 
     }
