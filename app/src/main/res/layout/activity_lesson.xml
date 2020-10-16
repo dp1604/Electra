@@ -29,6 +29,7 @@
         android:textColorHint="#87CEEB"
         android:layout_marginTop="30dp"
         android:layout_below="@id/texttitle"
+        android:textColor="#FFFFFF"
         android:inputType="textPersonName" />
 
     <EditText
@@ -41,7 +42,8 @@
         android:textColorHint="#87CEEB"
         android:layout_marginTop="15dp"
         android:layout_below="@id/topic"
-        android:inputType="textMultiLine" />
+        android:textColor="#FFFFFF"
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/description"
@@ -53,7 +55,8 @@
         android:textColorHint="#87CEEB"
         android:layout_marginTop="15dp"
         android:layout_below="@id/things"
-        android:inputType="textMultiLine" />
+        android:textColor="#FFFFFF"
+        android:inputType="textPersonName" />
 
     <Button
         android:id="@+id/btnInsert"

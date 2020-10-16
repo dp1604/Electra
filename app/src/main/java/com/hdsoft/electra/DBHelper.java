@@ -10,12 +10,12 @@ import androidx.annotation.Nullable;
 
 public class DBHelper extends SQLiteOpenHelper {
      public DBHelper(Context context) {
-        super(context, "Lesson.db", null, 1);
+         super(context, "Lesson.db", null, 1);
     }
 
     @Override
     public void onCreate(SQLiteDatabase DB) {
-         DB.execSQL("create Table Lesssons(topic TEXT primary key, things TEXT, dob TEXT)");
+         DB.execSQL("create Table Lesssons(topic TEXT primary key, things TEXT, description TEXT)");
 
     }
 
@@ -25,12 +25,12 @@ public class DBHelper extends SQLiteOpenHelper {
 
     }
 
-    public Boolean insertlesson(String topic,String things,String begin){
+    public Boolean insertlesson(String topic,String things,String description){
          SQLiteDatabase DB = this.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put("topic",topic);
-        contentValues.put("things",things);
-        contentValues.put("begin",begin);
+         ContentValues contentValues = new ContentValues();
+         contentValues.put("topic",topic);
+         contentValues.put("things",things);
+         contentValues.put("description",description);
 
         long result=DB.insert("Lessons",null, contentValues);
         if(result==-1){
@@ -40,11 +40,11 @@ public class DBHelper extends SQLiteOpenHelper {
         }
     }
 
-    public Boolean updatelesson(String topic,String things,String begin){
+    public Boolean updatelesson(String topic,String things,String description){
         SQLiteDatabase DB = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("things",things);
-        contentValues.put("begin",begin);
+        contentValues.put("description",description);
         Cursor cursor = DB.rawQuery("Select * from Lessons where topic = ?", new String[] {topic});
         if(cursor.getCount()>0) {
             long result = DB.update("Lessons", contentValues, "topic=?", new String[]{topic});
