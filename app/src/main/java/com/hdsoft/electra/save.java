@@ -81,9 +81,69 @@ public class save extends AppCompatActivity {
             } else if(dataFieldsList.get(i).getCircuitId() == 2){
                 oscillator555PresetBtn.setVisibility(View.VISIBLE);
                 delOscillator555PresetBtn.setVisibility(View.VISIBLE);
+                delOscillator555PresetBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        builder.setMessage("Are you sure you want to delete this preset ?")
+                                .setTitle("Confirm Delete")
+                                .setCancelable(false)
+                                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        finish();
+                                        try{
+                                            db.deleteDataField(dataFieldsList.get(loop));
+                                        } catch(Exception e){
+                                            e.printStackTrace();
+                                        }
+                                        oscillator555PresetBtn.setVisibility(View.GONE);
+                                        delOscillator555PresetBtn.setVisibility(View.GONE);
+                                    }
+                                })
+                                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        dialog.cancel();
+                                        Toast.makeText(getApplicationContext(),"Preset not deleted",
+                                                Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                        AlertDialog alert = builder.create();
+                        alert.setTitle("Confirm Delete");
+                        alert.show();
+                    }
+                });
             } else if(dataFieldsList.get(i).getCircuitId() == 3){
                 colpittsOscillatorPresetBtn.setVisibility(View.VISIBLE);
                 delColpittsOscillatorPresetBtn.setVisibility(View.VISIBLE);
+                delColpittsOscillatorPresetBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        builder.setMessage("Are you sure you want to delete this preset ?")
+                                .setTitle("Confirm Delete")
+                                .setCancelable(false)
+                                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        finish();
+                                        try{
+                                            db.deleteDataField(dataFieldsList.get(loop));
+                                        } catch(Exception e){
+                                            e.printStackTrace();
+                                        }
+                                        colpittsOscillatorPresetBtn.setVisibility(View.GONE);
+                                        delColpittsOscillatorPresetBtn.setVisibility(View.GONE);
+                                    }
+                                })
+                                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        dialog.cancel();
+                                        Toast.makeText(getApplicationContext(),"Preset not deleted",
+                                                Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                        AlertDialog alert = builder.create();
+                        alert.setTitle("Confirm Delete");
+                        alert.show();
+                    }
+                });
             }
         }
 
@@ -95,6 +155,30 @@ public class save extends AppCompatActivity {
                 Intent intent = new Intent(view.getContext(), TheCalculator.class);
                 intent.putExtra("circuitId", "1");// example : 1 = ohm's law
                 intent.putExtra("result", "Current (mA)");// example : Current = ohm's law
+                intent.putExtra("isPreset","yes");// yes or no
+
+                view.getContext().startActivity(intent);
+            }
+        });
+
+        oscillator555PresetBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), TheCalculator.class);
+                intent.putExtra("circuitId", "2");// example : 1 = ohm's law
+                intent.putExtra("result", "Frequency (Hz)");// example : Current = ohm's law
+                intent.putExtra("isPreset","yes");// yes or no
+
+                view.getContext().startActivity(intent);
+            }
+        });
+
+        colpittsOscillatorPresetBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), TheCalculator.class);
+                intent.putExtra("circuitId", "3");// example : 1 = ohm's law
+                intent.putExtra("result", "Frequency (Hz)");// example : Current = ohm's law
                 intent.putExtra("isPreset","yes");// yes or no
 
                 view.getContext().startActivity(intent);

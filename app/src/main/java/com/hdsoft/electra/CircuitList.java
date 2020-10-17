@@ -28,6 +28,32 @@ public class CircuitList extends AppCompatActivity {
             }
         });
 
+        Button oscillator555Button = findViewById(R.id.oscillator_555_btn);
+        oscillator555Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), TheCalculator.class);
+                intent.putExtra("circuitId", "2");// example : 1 = ohm's law
+                intent.putExtra("result", "Frequency (Hz)");// example : Current = ohm's law
+                intent.putExtra("isPreset","no");// yes or no
+
+                view.getContext().startActivity(intent);
+            }
+        });
+
+        Button colpittsOscillatorButton = findViewById(R.id.colpitts_oscillator_btn);
+        colpittsOscillatorButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), TheCalculator.class);
+                intent.putExtra("circuitId", "3");// example : 1 = ohm's law
+                intent.putExtra("result", "Frequency (Hz)");// example : Current = ohm's law
+                intent.putExtra("isPreset","no");// yes or no
+
+                view.getContext().startActivity(intent);
+            }
+        });
+
         Button homeBtn = findViewById(R.id.home_btn);
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override

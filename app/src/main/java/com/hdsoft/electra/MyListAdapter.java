@@ -42,7 +42,12 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
             public void afterTextChanged(Editable s) {}
             public void beforeTextChanged(CharSequence s, int start, int count, int after){}
             public void onTextChanged(CharSequence s, int start, int before, int count){
-                listdata[position].setValue(Double.parseDouble(holder.value.getText().toString()));
+                try{
+                    listdata[position].setValue(Double.parseDouble(holder.value.getText().toString()));
+                } catch(Exception e){
+                    listdata[position].setValue(0.0);
+                    holder.value.setText("0.0");
+                }
             }
         });
     }
