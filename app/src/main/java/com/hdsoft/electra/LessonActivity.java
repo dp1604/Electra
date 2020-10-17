@@ -92,7 +92,7 @@ public class LessonActivity extends AppCompatActivity {
 
                 androidx.appcompat.app.AlertDialog.Builder builder = new AlertDialog.Builder(LessonActivity.this);
                 builder.setCancelable(true);
-                builder.setTitle("User Entries");
+                builder.setTitle("Lessons");
                 builder.setMessage(buffer.toString());
                 builder.show();
             }
