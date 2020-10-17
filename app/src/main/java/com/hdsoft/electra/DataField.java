@@ -10,13 +10,15 @@ public class DataField {
     private int circuitId;
     private String key;
     private Double value;
+    private String unit;
 
-    public DataField(int id, String timestamp, int circuitId, String key, Double value){
+    public DataField(int id, String timestamp, int circuitId, String key, Double value, String unit){
         Date now = new Date();
         this.timestamp = ("" + now.getTime() + "");
         this.circuitId = circuitId;
         this.key = key;
         this.value = value;
+        this.unit = unit;
     }
 
     public DataField(){
@@ -62,5 +64,13 @@ public class DataField {
 
     public void setValue(Double value){
         this.value = value;
+    }
+
+    public String getUnit(){
+        return unit;
+    }
+
+    public void setUnit(String unit){
+        this.unit = unit;
     }
 }

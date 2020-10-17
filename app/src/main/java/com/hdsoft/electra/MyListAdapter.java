@@ -30,7 +30,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
         final DataField myListData = listdata[position];
-        holder.key.setText(listdata[position].getKey()+" :");
+        holder.key.setText(listdata[position].getKey()+" "+listdata[position].getUnit()+" :");
         holder.value.setText(listdata[position].getValue().toString());
         holder.constraintLayout.setOnClickListener(new View.OnClickListener() {
             @Override

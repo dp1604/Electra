@@ -26,12 +26,12 @@ public class CalculatorEngine {
         Random rand = new Random();
         Date now = new Date();
         return new DataField[] {
-                new DataField(rand.nextInt(999999), ("" + now.getTime() + ""), 1, "Voltage", 0.0),
-                new DataField(rand.nextInt(999999), ("" + now.getTime() + ""), 1, "Resistance", 0.0)
+                new DataField(rand.nextInt(999999), ("" + now.getTime() + ""), 1, "Voltage", 0.0, "(V)"),
+                new DataField(rand.nextInt(999999), ("" + now.getTime() + ""), 1, "Resistance", 0.0, "(Ohm)")
         };
     }
 
     public Double ohmsLawCalculation(DataField[] data){
-        return (data[0].getValue()/data[1].getValue());
+        return ((data[0].getValue()/data[1].getValue())*1000.0);
     }
 }

@@ -25,5 +25,23 @@ public class Circuits extends AppCompatActivity {
                 view.getContext().startActivity(intent);
             }
         });
+
+        Button circuitPresetsButton = findViewById(R.id.circuit_presets_btn);
+        circuitPresetsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), save.class);
+                view.getContext().startActivity(intent);
+            }
+        });
+
+        Button homeBtn = findViewById(R.id.home_btn);
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), Home.class);
+                view.getContext().startActivity(intent);
+            }
+        });
     }
 }
